@@ -1,0 +1,58 @@
+{
+	"parameters": {
+		"background_color": [{
+			"order": 1,
+			"value": "#c4aa93"
+		}],
+		"background_image": [{
+			"order": 2,
+			"value": "linear-gradient(335deg, #c9af99 23px, transparent 23px),linear-gradient(155deg, #c9af99 23px, transparent 23px),linear-gradient(335deg, #c9af99 23px, transparent 23px),linear-gradient(155deg, #c9af99 23px, transparent 23px)"
+		}],
+		"background_size": [{
+			"order": 3,
+			"value": "cover"
+		}],
+		"background_position": [{
+			"order": 4,
+			"value": "50% 20%"
+		}],
+		"header_allCaps": [{
+			"order": 5,
+			"value": "false"
+		}],
+		"header_fontBold": [{
+			"order": 6,
+			"value": "false"
+		}],
+		"header_textAlignCenter": [{
+			"order": 7,
+			"value": "false"
+		}],
+		"header_fontSize": [{
+			"order": 8,
+			"value": 48
+		}],
+    "congratulations_bgr_color" : [{
+      "order": 9,
+      "value" : "#4cbaff"
+	   }],
+	  "uncoloredImgColor" : [{
+	  	"order": 10,
+	  	"value": "rgba(255, 255, 255, 0.4)"
+	  }]      
+	},
+
+	"texts" : {
+		"page_title" : [{
+			"order": 11,
+			"written" : "Colorize."
+		}],
+		"header_text": [{
+			"order": 12,
+			"written": "COLORIZE."
+		}]
+	}
+}
+
+
+

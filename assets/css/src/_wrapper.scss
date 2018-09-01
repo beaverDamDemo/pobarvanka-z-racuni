@@ -1,0 +1,11 @@
+#wrapper {
+  overflow: hidden;
+  width: 1024px;
+  height: 672px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1); 
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
