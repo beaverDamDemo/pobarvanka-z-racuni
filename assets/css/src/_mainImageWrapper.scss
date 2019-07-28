@@ -1,0 +1,21 @@
+#mainImage {
+	position: absolute;
+	right: 144px;
+  top: 10px;
+  width: 358px;
+  height: 630px;
+}
+
+#mainImage svg #static-letters {
+	pointer-events: none;	
+}
+
+#mainImage {
+	// cursor: not-allowed;
+}
+#mainImage svg path, #mainImage svg polyline, #mainImage svg rect, #mainImage svg text {
+	cursor: url('../images/brush.png') 10 5, auto;
+}
+#mainImage svg g[id^='inactive'] path {
+	cursor: auto;
+}

@@ -1,0 +1,78 @@
+.finalGreeting {
+  position: absolute;
+  display: block;
+  top: -0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: saddlebrown;
+  z-index: 1024;
+  transform: translate3d(0, -100%, 0);
+  min-height: 672px;
+  background-position: 50%;
+  &.on {
+    animation: bounceInTopRes 0.8s 1 forwards;
+  }
+  &.off {
+    animation: moveUpRes 0.25s 1 forwards;
+  }
+}
+
+.finalGreeting.off {
+  animation: moveUp 0.2s 1 forwards;
+}
+
+@keyframes moveUp
+{
+  0% {
+    transform: translate3d(0, 0%, 0);
+  }
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes moveUpRes {
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes bounceInTopRes
+{
+  0% {
+    animation-timing-function: ease-in;
+    transform: translate3d(0, -100%, 0);
+  }
+  60%, 100% {
+    animation-timing-function: ease-out;
+    transform: translate3d(0, 0%, 0);
+  }
+  80% {
+    animation-timing-function: ease-in;
+    transform: translate3d(0, -20%, 0);
+  }
+}
+.finalGreeting .finalGreeting_button_playagain {
+  height: 100px;
+  width: 385px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.finalGreeting .finalGreeting_button_playagain img {
+  cursor: pointer;
+}
+.finalGreeting .finalGreeting__innerWrapper {
+  display: block;
+  text-align: center;
+  bottom: 5%;
+  cursor: pointer;
+  position: relative;
+  top: 530px;
+  left: calc(50% - 483px);
+}
+.finalGreeting .finalGreeting__closeBtn {
+  position: absolute;
+  left: auto;
+  right: 20px;
+  z-index: 3;
+}
