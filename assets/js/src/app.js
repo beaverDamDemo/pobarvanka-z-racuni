@@ -32,15 +32,9 @@
       bucketColors = [],
       delay_clickFirstBucket = time+2000,
       congratulations_bgr_color,
-<<<<<<< HEAD
       instructions_audio, congratulations_audio, congratulations_image,
       congratulations_button, correct_audio, background_image_from_url, uncoloredImgColor;
 
-=======
-      instructions_audio, congratulations_audio, congratulations_image, 
-      congratulations_button, correct_audio, background_image_from_url, uncoloredImgColor;
-  
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
   window.audioCurrentlyPlaying = false;
   var drawingColor, drawingColorIndexId, drawingColorIndex;
   window.bucketColors;
@@ -62,11 +56,7 @@
     window.stage = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   }
 
-<<<<<<< HEAD
   $.getJSON( filesJson)
-=======
-  $.getJSON( filesJson) 
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
     .done(onfilesJsonComplete)
     .fail( function(error) {
       console.log('Request failed: ', error);
@@ -92,13 +82,8 @@
     .done(onJsonComplete)
     .fail( function(error) {
       console.log("Request failed: " +err );
-<<<<<<< HEAD
     });
   }
-=======
-    });  
-  }   
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 
   function onJsonComplete(data) {
     FastClick.attach(document.body);
@@ -114,11 +99,7 @@
       header_fontSize = data.parameters.header_fontSize[0].value;
       congratulations_bgr_color = data.parameters.congratulations_bgr_color[0].value;
       uncoloredImgColor = data.parameters.uncoloredImgColor[0].value;
-<<<<<<< HEAD
       window.uncoloredImgColor = uncoloredImgColor;
-=======
-      window.uncoloredImgColor = uncoloredImgColor;      
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
       /*texts*/
       page_title = data.texts.page_title[0].written;
       header_text = data.texts.header_text[0].written;
@@ -126,11 +107,7 @@
     catch( err) {
       console.warn('Error: ', err);
     }
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
     setBackgrounds();
     populateHeader();
     populateCongratulations();
@@ -151,17 +128,10 @@
         TweenMax.staggerTo( $(".buckets"), 0.05, {
           left: "0px"
         }, -0.06)
-<<<<<<< HEAD
       }, 65)
       setTimeout(()=>{
         $('#bucketsWrapper .buckets:nth-child(1)').trigger('click');
         $('#wrapper').removeClass('disabled');
-=======
-      }, 65)      
-      setTimeout(()=>{
-        $('#bucketsWrapper .buckets:nth-child(1)').trigger('click');
-        $('#wrapper').removeClass('disabled');  
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
       }, 100)
     })
 	}
@@ -201,11 +171,7 @@
     Tanja.prototype.checkSolved = function() {
       // console.log('currentColorId: ', this.currentColorId, 'correctColorId: ', this.correctColorId)
       if( this.currentColorId == this.correctColorId ) {
-<<<<<<< HEAD
         this.solved = true;
-=======
-        this.solved = true;  
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
       } else {
         this.solved = false;
       }
@@ -218,11 +184,7 @@
   // function loadMainImage(backgroundToBeColored) {
   window.loadMainImage = function(backgroundToBeColored) {
     tanjaArray = [];
-<<<<<<< HEAD
     // hardcoded / not random array of calculations. napis.label is just for helping
-=======
-    // hardcoded / not random array of calculations. napis.label is just for helping 
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
     let arrayOfCalculations = [
       ['', '1:1'],
       ['', '8:4'],
@@ -248,22 +210,14 @@
     ];
     hardcodedBucketTexts = [
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-<<<<<<< HEAD
     ];
-=======
-    ];    
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
     window.tanjaArray = [];
     var z = Snap("#mainImage");
     Snap.load(backgroundToBeColored, onSVGLoaded);
 
     function onSVGLoaded(data) {
       z.append( data );
-<<<<<<< HEAD
       Snap('#mainImage svg title').remove();
-=======
-      // Snap('#mainImage svg title').remove();
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 
       $.each( Snap('#mainImage').selectAll('g[id^=g]'), function(index, value) {
         // it loads the image in reverse order, from eg. g100 down to g0
@@ -288,11 +242,7 @@
         value.node.children[1].style.pointerEvents = 'none';
         Snap('#mainImage #'+$id+' #'+$pathId).attr({
           fill: uncoloredImgColor
-<<<<<<< HEAD
         })
-=======
-        })          
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
         tanjaArray[index].setColor(uncoloredImgColor, -999)
       });
 
@@ -324,40 +274,22 @@
       }
     }
     if( found == false) {
-<<<<<<< HEAD
       bucketColors.push(col);
       return bucketColors.length-1;
-=======
-      bucketColors.push(col); 
-      return bucketColors.length-1; 
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
     }
   }
 
   function setBackgrounds() {
-<<<<<<< HEAD
     $('#mainImage').css({
       'background-color': uncoloredImgColor
     })
-=======
-    // $('body').css({
-    //   'background-color' : background_color
-    // });
-    $('#mainImage').css({
-      'background-color': uncoloredImgColor
-    })   
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
     if( background_image_from_url.length > 0 ) {
       try {
         $('body').css({
           'background-image' : background_image_from_url,
           'background-size': background_size,
           'background-position': background_position
-<<<<<<< HEAD
         });
-=======
-        }); 
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
       } catch(e) {
         console.warn("Error appending image")
       }
@@ -369,20 +301,12 @@
           'background-size': background_size,
           'background-position': background_position,
           'background-image' : background_image
-<<<<<<< HEAD
         });
-=======
-        }); 
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
       } catch(e) {
         console.warn("Error appending image")
       }
     }
-<<<<<<< HEAD
   }  //setBackground end
-=======
-  }  //setBackground end  
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 
   function populateHeader() {
     document.title = page_title;
@@ -426,24 +350,15 @@
     }
   };
   function onAudioComplete(e) {
-<<<<<<< HEAD
     audioPlayer.off("complete");
-=======
-    audioPlayer.off("complete");    
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
   };
   function handleComplete(e) {
     window.audioCurrentlyPlaying = false;
   }
   function handleErrorAudio(e) {
     console.warn("Error handling audio: ", e);
-<<<<<<< HEAD
   }
 
-=======
-  } 
-  
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
   function populateCongratulations() {
     $('.finalGreeting').css({
       'background-color': congratulations_bgr_color,
@@ -451,20 +366,12 @@
       'width': '100%',
       'height': '100%',
       'background-repeat': 'no-repeat',
-<<<<<<< HEAD
       'background-size': '50% auto'
-=======
-      'background-size': '1024px 672px'
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
     });
     $('.finalGreeting .finalGreeting_button_playagain').css({
       'background-image': 'url('+ congratulations_button +')'
     });
-<<<<<<< HEAD
   }
-=======
-  }  
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 
   function Bucket(hex) {
     this.hex = hex;
@@ -495,15 +402,9 @@
     console.log("Sort disabled")
     // myBuckets.sort(dynamicSort("label"))
     window.myBuckets = myBuckets;
-<<<<<<< HEAD
     // here we set number of feedback stars. tanja array length is number of picture parts.
     number_of_examples = tanjaArray.length;
     window.number_of_examples = number_of_examples;
-=======
-    // here we set number of feedback stars. tanja array length is number of picture parts. 
-    number_of_examples = tanjaArray.length;
-    window.number_of_examples = number_of_examples;    
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
     drawingColor = bucketColors[0];
     let fragList = new Array, fragLoadedCount;
     function dynamicSort(property) {
@@ -540,11 +441,7 @@
       }
       populateFeedbackWrapper(number_of_examples);
     } //lodmulti
-<<<<<<< HEAD
 
-=======
- 
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
     function addLoadedFrags( list ) {
       let ourList;
 
@@ -583,26 +480,13 @@
 
   function fillUsedBuckets() {
     $.each( tanjaArray, function(index, value) {
-<<<<<<< HEAD
-=======
-      // console.log('index: ', index, "coor id: ", value.correctColorId)
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
       myBuckets[value.correctColorId].addUsedIn(index)
     })
   }
 
   function populateFeedbackWrapper(n) {
     for( let i=0; i<n; i++) {
-<<<<<<< HEAD
       $('#feedbackWrapper #feedbackContent').append("<div class='feedback-items'></div>");
     }
-=======
-      $('#feedbackWrapper #feedbackContent').append("<div class='feedback-items'></div>");  
-    }
-    $('#wrapper #feedbackWrapper').css({
-      'background-color': '#000'
-    })
-    
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
   }
 })();

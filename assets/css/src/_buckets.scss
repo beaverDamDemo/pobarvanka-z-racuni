@@ -1,9 +1,5 @@
 #bucketsWrapper {
-<<<<<<< HEAD
 	position: absolute;
-=======
-	position: absolute; 
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 	left: 30px;
 	display: flex;
 	flex-wrap: wrap;
@@ -23,11 +19,7 @@
 }
 .buckets .bucket__label{
 	position: absolute;
-<<<<<<< HEAD
 	left: 0;
-=======
-	left: 0; 
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 	top: 46px;
 	width: 100%;
 	height: 100%;
@@ -46,16 +38,9 @@
 		transform: scale(1) translate(-0px, 0px);
 	}
 	70% {
-<<<<<<< HEAD
 		transform: scale(1.4) translate(-0px, 3px);
 	}
 	to {
 		transform: scale(1.3) translate(-0px, 0px);
-=======
-		transform: scale(1.2) translate(-0px, 3px);
-	}
-	to {
-		transform: scale(1.15) translate(-0px, 0px);
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 	}
 }

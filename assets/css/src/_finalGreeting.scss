@@ -9,13 +9,7 @@
   z-index: 1024;
   transform: translate3d(0, -100%, 0);
   min-height: 672px;
-<<<<<<< HEAD
   background-position: 50%;
-=======
-  background-repeat: no-repeat;
-  background-size: 1024px 672px;
-  background-position: 50% 0;
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
   &.on {
     animation: bounceInTopRes 0.8s 1 forwards;
   }
@@ -42,11 +36,7 @@
     transform: translate3d(0, -100%, 0);
   }
 }
-<<<<<<< HEAD
 @keyframes bounceInTopRes
-=======
-@keyframes bounceInTopRes 
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 {
   0% {
     animation-timing-function: ease-in;
@@ -61,7 +51,6 @@
     transform: translate3d(0, -20%, 0);
   }
 }
-<<<<<<< HEAD
 .finalGreeting .finalGreeting__innerWrapper {
   position: absolute;
   cursor: pointer;
@@ -86,33 +75,3 @@
 }
 
 
-=======
-.finalGreeting .finalGreeting_button_playagain {
-  height: 100px;
-  width: 385px;
-  background-color: rgba(127, 127, 127, 0.35);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  border: 4px solid #fff;
-  border-radius: 8px;
-}
-.finalGreeting .finalGreeting_button_playagain img {
-  cursor: pointer;
-}
-.finalGreeting .finalGreeting__innerWrapper {
-  display: block;
-  text-align: center;
-  bottom: 5%;
-  cursor: pointer;
-  position: relative;
-  top: 530px;
-  left: calc(50% - 483px);
-}
-.finalGreeting .finalGreeting__closeBtn {
-  position: absolute;
-  left: auto;
-  right: 20px;
-  z-index: 3;
-}
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4

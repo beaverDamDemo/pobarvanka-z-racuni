@@ -30,11 +30,7 @@
 		}],
 		"header_fontSize": [{
 			"order": 8,
-<<<<<<< HEAD
 			"value": 64
-=======
-			"value": 48
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 		}],
     "congratulations_bgr_color" : [{
       "order": 9,
@@ -43,11 +39,7 @@
 	  "uncoloredImgColor" : [{
 	  	"order": 10,
 	  	"value": "rgba(255, 255, 255, 0.4)"
-<<<<<<< HEAD
 	  }]
-=======
-	  }]      
->>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 	},
 
 	"texts" : {
