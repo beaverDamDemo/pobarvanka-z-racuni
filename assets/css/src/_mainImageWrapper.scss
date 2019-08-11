@@ -7,7 +7,15 @@
 }
 
 #mainImage svg #static-letters {
+<<<<<<< HEAD
 	pointer-events: none;
+=======
+	pointer-events: none;	
+}
+
+#mainImage {
+	// cursor: not-allowed;
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 }
 #mainImage svg path, #mainImage svg polyline, #mainImage svg rect, #mainImage svg text {
 	cursor: url('../images/brush.png') 10 5, auto;

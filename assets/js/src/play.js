@@ -57,16 +57,30 @@ $('#mainImage').on('click', function(e) {
 		   	// reverting back to default color - like two consecutive clicks
 		   	$snap.animate( { fill : '#ffffff' }, 300, mina.easeout);
 				window.tanjaArray[part_id].setColor('#ffffff', -999);
+<<<<<<< HEAD
+=======
+				// updateFeedbackItems(window.tanjaArray[part_id].correctColor);
+				// if( colorBeforeChange != uncoloredImgColor) updateFeedbackItems(colorBeforeChange)
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 		  }
 		  else {
 	   		$snap.animate( { fill : drawingColor.hex }, 300, mina.easeout);
 				window.tanjaArray[part_id].setColor(drawingColor.hex, window.drawingColor.index);
+<<<<<<< HEAD
+=======
+   			// updateFeedbackItems(window.tanjaArray[part_id].correctColor);
+				// updateFeedbackItems(drawingColor.hex);
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 		  }
 		  updateFeedbackItemsSimplified();
 	  }
 		catch (exc) {
 		   console.log("exc: ", exc)
+<<<<<<< HEAD
 		}
+=======
+		} 	
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
   }
   catch( e) {
    	console.warn("Error: ", e);
@@ -91,7 +105,11 @@ function getRGB(col) {
 	}
 	else {
 		return colorName2rgb(col);
+<<<<<<< HEAD
 	}
+=======
+	}	
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 }
 
 function updateFeedbackItemsSimplified() {
@@ -107,7 +125,11 @@ function updateFeedbackItemsSimplified() {
 	if( _activeAfter > _activeBefore ) {
 		handleAudio('correct_audio')
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 	if( $('.feedback-items.active').length == number_of_examples) {
 		$('#bucketsWrapper').addClass('disabled');
 		$('#wrapper').addClass('disabled');
@@ -118,9 +140,75 @@ function updateFeedbackItemsSimplified() {
 		setTimeout(()=>{
 			$('.finalGreeting').removeClass('off').addClass('on');
 		}, 2927);
+<<<<<<< HEAD
 	}
 }
 
+=======
+	}	
+}
+
+
+// function updateFeedbackItems(selectedColorHex) {
+// 	console.warn("CHecking: ", selectedColorHex)
+// 	let myColor = selectedColorHex;
+// 	let allCorrect = true;
+// 	$.each( window.tanjaArray, function(index, value) {
+// 		if( value.currentColor == myColor) {
+// 			if( value.solved == false) {
+// 				allCorrect = false;
+// 			}
+// 		}
+// 		if( value.correctColor == myColor) {
+// 			if( value.solved == false) {
+// 				allCorrect = false;
+// 			}
+// 		}
+// 	})
+
+// 	try {
+// 		( allCorrect==true ) ? console.log("%cAll correct.", "background: green; color: white") : console.log("%cAt least one mistake.", "background: crimson; color: white") 	
+// 	} catch(e) {
+// 		console.error("E: ", e)
+// 	}
+
+// 	let selectedBucketId = undefined;
+// 	for( let sara=0; sara<myBuckets.length; sara++) {
+// 		if( myBuckets[sara].hex == selectedColorHex) {
+// 			selectedBucketId = sara;
+// 		}
+// 	}
+// 	// count how many items have class solved!
+// 	let solvedBeforeChange = myBuckets[selectedBucketId].getSolved();
+// 	if( solvedBeforeChange == true ) {
+// 		if( allCorrect != true ) {
+// 			// remove one feedback star!
+// 			myBuckets[selectedBucketId].setSolved(false);
+// 			$('.feedback-items.active').first().removeClass('active');
+// 		}
+// 	} else {
+// 		if( allCorrect == true ) {
+// 			// add one feedback star
+// 			handleAudio('correct_audio')
+// 			myBuckets[selectedBucketId].setSolved(true);
+// 			$('.feedback-items').not('.active').last().addClass('active');
+// 		}
+// 	}
+
+// 	if ( $('.feedback-items.active').length == number_of_examples) {
+// 		$('#bucketsWrapper').addClass('disabled');
+// 		$('#mainImage').addClass('disabled');
+// 		setTimeout(()=>{
+// 			let rnd = Math.floor( Math.random() * 4);
+//     	handleAudio('congratulations-'+rnd);
+// 		}, 1468);
+// 		setTimeout(()=>{
+// 			$('.finalGreeting').removeClass('off').addClass('on');
+// 		}, 3982);
+// 	}
+// } //updateFeedbackItemsEnd
+
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 $('.finalGreeting .finalGreeting_button_playagain').on('click', function() {
 	$('.finalGreeting').removeClass('off').addClass('on');
 	playAgain();
@@ -134,6 +222,18 @@ $('.closeButton.finalGreeting__closeBtn').on('click', function() {
 	window.history.back();
 });
 
+<<<<<<< HEAD
+=======
+$('.helpButton').on('click', function() {
+  if( window.audioCurrentlyPlaying == true ) {
+    createjs.Sound.stop();
+    window.audioCurrentlyPlaying = false;
+  } else {
+    handleAudio('instructions_audio');    
+  }
+});
+
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 function playAgain() {
 	// play again
 	console.log('resetting')
@@ -147,6 +247,10 @@ function playAgain() {
 	loadMainImage(backgroundToBeColored);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 var ResizeToFullWindow = (function () {
   'use strict';
   var $wrapper = $('#wrapper');
@@ -162,10 +266,33 @@ var ResizeToFullWindow = (function () {
 
     width = $('body').width();
     height = $('body').height();
+<<<<<<< HEAD
     var ratioHeightWidth = $('body').width() / 1024;
     var ratioHeight = $('body').height() / 768;
     var ratioToUse = (ratioHeightWidth < ratioHeight) ? ratioHeightWidth:ratioHeight;
     window.scaleRatio = ratioToUse;
+=======
+    // var ratioHeightWidth = width / 1024;
+    var ratioHeightWidth = $('body').width() / 1024;
+    // console.log('ratioHeightWidth', ratioHeightWidth);
+
+    // var ratioHeight = height / 768;
+    var ratioHeight = $('body').height() / 768;
+    // console.log('ratioHeight', ratioHeight);
+    var ratioToUse = (ratioHeightWidth < ratioHeight) ? ratioHeightWidth:ratioHeight;
+
+    var scaleRatioLabel;
+    if(ratioHeightWidth < ratioHeight) {
+      scaleRatioLabel = 'w';
+    }
+    else {
+      scaleRatioLabel = 'h';
+    }
+
+    window.scaleRatio = ratioToUse;
+    window.scaleRatioLabel = scaleRatioLabel;
+
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 
     $($wrapper[0]).css({
       'transform': 'scale(' + ratioToUse + ') translateX(-50%)',
@@ -177,7 +304,37 @@ var ResizeToFullWindow = (function () {
     });
   };
   resizeWrapper();
+<<<<<<< HEAD
   window.addEventListener('resize', resizeWrapper);
+=======
+
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+
+  var myEfficientFn = debounce(function() {
+    // console.log('debaunce');
+    resizeWrapper();
+  }, 50);
+
+  window.addEventListener('resize', myEfficientFn);
+
+  return {
+    scale: resizeWrapper
+  }
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 })();
 
 function rgb2hex(rgb){
@@ -234,7 +391,11 @@ function rgb2hex(rgb){
 	else {
 		hue = 4 + (r-g) / (max-min);
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 	if( isNaN(hue)) {
 		hue = 6-(r+g+b)/5120;
 	}
@@ -248,7 +409,11 @@ function rgb2hex(rgb){
 
 function hex2rgb(c) {
 	// console.log('Converting color hex 2 rgb')
+<<<<<<< HEAD
    if( c.length == 4)
+=======
+   if( c.length == 4) 
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
    {
 	  var result = /^#?([a-f\d]{1})([a-f\d]{1})([a-f\d]{1})$/i.exec(c);
 	  result[1]+=result[1];

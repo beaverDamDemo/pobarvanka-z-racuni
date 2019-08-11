@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
 	"backgroundToBeColored" : "assets/images/pobarvanka-01.svg",
 
+=======
+	"backgroundToBeColored" : "assets/images/pobarvanka.svg",
+	
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 	"supportFiles" : {
 		"instructions_audio" : [{
 			"order" : 1,
@@ -19,7 +24,11 @@
 			"order" : 3,
 			"contentType" : "image/png",
 			"uri" : "assets/images/congratulations.png"
+<<<<<<< HEAD
 		}],
+=======
+		}],		
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 		"congratulations_button" : [{
 			"order" : 4,
 			"contentType" : "image/png",
@@ -34,6 +43,10 @@
 			"order" : 6,
 			"contentType" : "image/jpeg",
 			"uri" : "url('assets/images/ridge-walley-md.jpg')"
+<<<<<<< HEAD
 		}]
+=======
+		}]	
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
 	}
 }

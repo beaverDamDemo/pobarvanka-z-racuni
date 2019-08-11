@@ -1,4 +1,5 @@
 #wrapper {
+<<<<<<< HEAD
 	position: absolute;
 	background-repeat: no-repeat;
   transition: all 0.2s ease;
@@ -8,6 +9,15 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%) scale(1);
+=======
+  overflow: hidden;
+  width: 1024px;
+  height: 672px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1); 
+>>>>>>> 963b32c6c3d1ca7a34ecb930ccd4b647f1d325a4
   transform-origin: 0 0;
   transition: all 0.2s ease;
 }
