@@ -17,11 +17,11 @@
 	align-content: flex-end;
 	max-height: inherit;
 	position: absolute;
-	background: #414141;
+	background: rgba(68, 68, 68, 0.6);
 }
 .feedback-items {
 	width: inherit;
-	height: 40px; 
+	height: 40px;
 	border-radius: 3px;
 	margin-top: 13px;
 	position: relative;
@@ -35,38 +35,4 @@
 }
 .feedback-items:last-of-type {
 	margin-bottom: 10px;
-}
-@media screen and (max-width: 800px) {
-	// #feedbackWrapper {
-	// 	width: 40px;
-	// }
-	// .feedback-items {
-	// 	height: 32px; 
-	// 	margin-top: 10px;
-	//   background-size: 71px auto;
-	//   background-position: 5px 0;
-	// }
-	// .feedback-items.active {
-	// 	background-position: -36px 0;
-	// }
-	// .feedback-items:last-of-type {
-	// 	margin-bottom: 8px;
-	// }
-}
-@media screen and (max-width: 600px) {
-	// #feedbackWrapper {
-	// 	width: 32px;
-	// }
-	// .feedback-items {
-	// 	height: 25px; 
-	// 	margin-top: 7px;
-	//   background-size: 58px auto;
-	//   background-position: 4px 0;
-	// }
-	// .feedback-items.active {
-	// 	background-position: -29px 0;
-	// }
-	// .feedback-items:last-of-type {
-	// 	margin-bottom: 7px;
-	// }
 }

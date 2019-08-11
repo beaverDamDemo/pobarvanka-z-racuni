@@ -57,14 +57,10 @@ $('#mainImage').on('click', function(e) {
 		   	// reverting back to default color - like two consecutive clicks
 		   	$snap.animate( { fill : '#ffffff' }, 300, mina.easeout);
 				window.tanjaArray[part_id].setColor('#ffffff', -999);
-				// updateFeedbackItems(window.tanjaArray[part_id].correctColor);
-				// if( colorBeforeChange != uncoloredImgColor) updateFeedbackItems(colorBeforeChange)
 		  }
 		  else {
 	   		$snap.animate( { fill : drawingColor.hex }, 300, mina.easeout);
 				window.tanjaArray[part_id].setColor(drawingColor.hex, window.drawingColor.index);
-   			// updateFeedbackItems(window.tanjaArray[part_id].correctColor);
-				// updateFeedbackItems(drawingColor.hex);
 		  }
 		  updateFeedbackItemsSimplified();
 	  }
@@ -136,15 +132,6 @@ $('#closeButton').on('click', function() {
 
 $('.closeButton.finalGreeting__closeBtn').on('click', function() {
 	window.history.back();
-});
-
-$('.helpButton').on('click', function() {
-  if( window.audioCurrentlyPlaying == true ) {
-    createjs.Sound.stop();
-    window.audioCurrentlyPlaying = false;
-  } else {
-    handleAudio('instructions_audio');
-  }
 });
 
 function playAgain() {

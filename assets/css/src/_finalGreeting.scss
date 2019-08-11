@@ -51,28 +51,27 @@
     transform: translate3d(0, -20%, 0);
   }
 }
-.finalGreeting .finalGreeting_button_playagain {
+.finalGreeting .finalGreeting__innerWrapper {
+  position: absolute;
+  cursor: pointer;
+  top: calc(50% + 5vw);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100px;
   height: 100px;
-  width: 385px;
+}
+.finalGreeting .finalGreeting_button_playagain {
+  height: inherit;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  &:hover {
+    filter: brightness(1.14);
+  }
 }
-.finalGreeting .finalGreeting_button_playagain img {
-  cursor: pointer;
+.finalGreeting a {
+
 }
-.finalGreeting .finalGreeting__innerWrapper {
-  display: block;
-  text-align: center;
-  bottom: 5%;
-  cursor: pointer;
-  position: relative;
-  top: 530px;
-  left: calc(50% - 483px);
-}
-.finalGreeting .finalGreeting__closeBtn {
-  position: absolute;
-  left: auto;
-  right: 20px;
-  z-index: 3;
-}
+
+

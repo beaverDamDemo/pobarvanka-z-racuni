@@ -217,7 +217,7 @@
 
     function onSVGLoaded(data) {
       z.append( data );
-      // Snap('#mainImage svg title').remove();
+      Snap('#mainImage svg title').remove();
 
       $.each( Snap('#mainImage').selectAll('g[id^=g]'), function(index, value) {
         // it loads the image in reverse order, from eg. g100 down to g0
@@ -280,9 +280,6 @@
   }
 
   function setBackgrounds() {
-    // $('body').css({
-    //   'background-color' : background_color
-    // });
     $('#mainImage').css({
       'background-color': uncoloredImgColor
     })
@@ -483,7 +480,6 @@
 
   function fillUsedBuckets() {
     $.each( tanjaArray, function(index, value) {
-      // console.log('index: ', index, "coor id: ", value.correctColorId)
       myBuckets[value.correctColorId].addUsedIn(index)
     })
   }
@@ -492,9 +488,5 @@
     for( let i=0; i<n; i++) {
       $('#feedbackWrapper #feedbackContent').append("<div class='feedback-items'></div>");
     }
-    $('#wrapper #feedbackWrapper').css({
-      'background-color': '#000'
-    })
-
   }
 })();
