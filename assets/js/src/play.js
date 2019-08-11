@@ -117,7 +117,7 @@ function updateFeedbackItemsSimplified() {
 		}, 500);
 		setTimeout(()=>{
 			$('.finalGreeting').removeClass('off').addClass('on');
-		}, 2927);
+		}, 2228);
 	}
 }
 
